@@ -1,18 +1,10 @@
 import java.util.Scanner;
 import java.util.Queue;
 
-/**
- * PrinterQueueDriver class demonstrates the functionality of the PrinterQueue class.
- * Provides an interactive menu for managing printer documents.
- */
 public class PrinterQueueDriver {
     private static PrinterQueue printerQueue;
     private static Scanner scanner;
 
-    /**
-     * Main method to run the printer queue management system.
-     * @param args command line arguments (not used)
-     */
     public static void main(String[] args) {
         printerQueue = new PrinterQueue();
         scanner = new Scanner(System.in);
@@ -54,9 +46,6 @@ public class PrinterQueueDriver {
         scanner.close();
     }
 
-    /**
-     * Displays the main menu.
-     */
     private static void displayMenu() {
         System.out.println("\n--- Main Menu ---");
         System.out.println("1. Add a document to the queue");
@@ -68,10 +57,6 @@ public class PrinterQueueDriver {
         System.out.print("Enter your choice (1-6): ");
     }
 
-    /**
-     * Gets a valid menu choice from the user.
-     * @return user's menu choice
-     */
     private static int getMenuChoice() {
         int choice = -1;
         try {
@@ -82,9 +67,6 @@ public class PrinterQueueDriver {
         return choice;
     }
 
-    /**
-     * Adds a document to the printer queue.
-     */
     private static void addDocumentToQueue() {
         System.out.println("\n--- Add Document ---");
 
@@ -120,9 +102,6 @@ public class PrinterQueueDriver {
         }
     }
 
-    /**
-     * Removes a document from the printer queue.
-     */
     private static void removeDocumentFromQueue() {
         if (printerQueue.isEmpty()) {
             System.out.println("\nError: Queue is empty. No documents to remove.");
@@ -169,9 +148,6 @@ public class PrinterQueueDriver {
         }
     }
 
-    /**
-     * Prints the document at the front of the queue.
-     */
     private static void printDocumentFromQueue() {
         System.out.println("\n--- Print Document ---");
 
@@ -189,9 +165,6 @@ public class PrinterQueueDriver {
         }
     }
 
-    /**
-     * Displays the current size of the queue.
-     */
     private static void displayQueueSize() {
         System.out.println("\n--- Queue Size ---");
         int size = printerQueue.getQueueSize();
@@ -205,9 +178,6 @@ public class PrinterQueueDriver {
         }
     }
 
-    /**
-     * Displays all documents in the queue.
-     */
     private static void displayQueue() {
         System.out.println("\n--- Current Queue ---");
 
